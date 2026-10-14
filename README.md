@@ -1,32 +1,43 @@
-# React + TypeScript + Vite
+# Boredom Buster
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A polished React + TypeScript web app that helps you instantly pick fun mini-challenges when you feel bored.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Premium dark UI with purple/electric-blue accents, gradients, smooth hover/focus states, and responsive layout
+- Homepage title: **“Bored? Let's fix that.”**
+- Four challenge categories:
+  - Quick Games
+  - Brain Teasers
+  - Creative Tasks
+  - Random Challenges
+- **Surprise Me** random challenge generator
+- **Give Me Another** flow to rotate to another challenge
+- Challenge card with title, description, estimated time, difficulty, and points
+- Favorites system with persistence and favorites-only filtering
+- Score + streak progression persisted in `localStorage`
+- Completion logic that prevents duplicate completion of the same challenge on the same day
+- Loading, empty, and completed states for key interactions
+- 32 predefined challenges across the four categories
 
-## React Compiler
+## Local setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Open the local URL printed by Vite (typically `http://localhost:5173`).
+
+## Quality checks
+
+```bash
+npm run lint
+npm run build
+```
+
+## Implementation notes
+
+- Built with **Vite + React + TypeScript**
+- No backend, auth, API keys, or paid services
+- Data and progress are client-side only (stored in `localStorage`)
